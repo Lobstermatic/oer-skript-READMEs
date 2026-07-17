@@ -61,7 +61,7 @@ Sinn der README ist,
 
 - die Qualität des gesamten Datenbestands deutlich machen.
 
-In Anlehnung an [Ken Williams (1997)](https://web.archive.org/web/20121004221303/http://mathforum.org/ken/perl_modules.html#document) gilt: 
+In Anlehnung an [Ken Williams (1997)](https://web.archive.org/web/20121004221303/http://mathforum.org/ken/perl_modules.html#document) gilt:
 
 > Deine Daten-Dokumentation in den READMEs ist dann vollständig, wenn jedermensch die Nützlichkeit der Daten beurteilen kann, ohne sie zu öffnen. Das ist wichtig, um die Nachnutzbarkeit der Daten möglichst umfangreich zu ermöglichen. Die Dokumentation, nicht die Daten sollten darüber bestimmen, ob Dein Datenbestand wertvoll ist.
 
@@ -108,7 +108,7 @@ Seit Etablierung von online-Repositorien wie [gitlab](https://gitlab.com/), [git
 Beispiel der Datensatz-README-Datei als markdown gerendert:
 
 |  |
-|-------|
+|------------------------------------------------------------------------|
 | **Dateiname**: "hp_3D-Modelle.ods" |
 | **Autor:in**: "Doe, John" |
 | **Autor:in Readme**: "Doe, John" |
@@ -377,7 +377,15 @@ Zweckmäßigkeit: (i.S.v. Anwendungsszenarien für Datensatz)
 
 ## Weiterführende Quellen und Informationen {.appendix .unnumbered}
 
-<!-- Der Ort für weiterführende Quellen und Informationen. Wenn Sie Fußnoten oder Literaturverweise im Text eingefügt haben, werden die bibliographischen Angaben automatisch in weiteren Abschnitten generiert und in das Dokument eingefügt. -->
+- [4TU.ResearchData. „Guidelines for Creating a README File“. Delft University of Technology, 2022.](http://resolver.tudelft.nl/uuid:66e210e1-c884-45d6-b9d4-711907680452)
+- [Auckland University. „Describing research data with a README \| ResearchHub“.](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/organising-and-describing-data/research-data-readme)
+- [Bugayenko, Yegor. „Elegant READMEs“. Yegor256 (blog).](https://www.yegor256.com/2019/04/23/elegant-readme.html)
+- [Cornell University. „Readme Template“, o.D.](https://cornell.app.box.com/v/ReadmeTemplate)
+- [Dahdul, Wasila. „Research Guides: Research Data Management: README Files“, 2023.](https://guides.lib.uci.edu/datamanagement/readme)
+- [Dryad. „Good data practices“, 2022.](https://datadryad.org/stash/best_practices)
+- [Goldman, Julie. „What’s in a README?“, 27. Juli 2020.](https://osf.io/jt7zv/)
+- [„Guide to Writing “Readme” Style Metadata – Cornell Data Services“.](https://data.research.cornell.edu/data-management/sharing/readme/)
+- [KV Leuven. „README Files“. Zugegriffen 15. Januar 2024.](https://www.kuleuven.be/rdm/en/guidance/documentation-metadata/README)
 
 ## Nachnutzen {.appendix .unnumbered}
 
