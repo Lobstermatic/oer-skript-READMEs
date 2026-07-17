@@ -1,0 +1,429 @@
+---
+title: "README-Dateien für lokale Datenverzeichnisse"
+subtitle: "Skript und Templates zur Erstellung von README-Dateien"
+lang: de
+date: 1900-01-01
+date-format: "DD.MM.YYYY"
+date-modified: last-modified
+metadata-files:
+  - _layout.yml
+  - _autor_innen.yml
+  - _oer_metadata.yml
+# Optional
+bibliography: bibliographie.bib
+toc: true
+toc-expand: true
+toc-title: |
+  {{< brand logo large >}}
+toc-location: right
+number-sections: true # Auf false setzen, wenn keine automatische Abschnittsnummerierung gewünscht
+lightbox: true
+crossref: 
+  lof-title: "Liste der Abbildungen"
+# Für CI-build in github
+execute:
+  freeze: auto
+---
+
+## Einleitung
+
+In Digitalisierungsprojekten sind Metadaten entscheidend. Diese deskriptiven Informationen über Daten ermöglichen es anderen Forschenden, den Kontext, die Struktur und die Bedeutung der Daten zu verstehen und diese nachzunutzen. Eine der effektivsten Methoden zur Bereitstellung dieser Informationen für lokale Datenverzeichnisse ist die Nutzung von README-Dateien.
+
+### **Lernziele** {.kolophon .unnumbered .unlisted}
+
+In diesem Skript lernen sie [@petersen2023]:
+
+- Kompetenz #.#
+
+### **Vorwissen** {.kolophon .unnumbered .unlisted}
+
+Für das Verständnis dieses Skripts werden keine Kenntnisse vorausgesetzt.
+
+### **Bezug zum Forschungsdatenlebenszyklus** {.kolophon .unnumbered .unlisted}
+
+README-Dateien werden spätestens am Ende eines Forschungsprojektes erstellt, wenn die Daten archiviert und zur Nachnutzung bereit gestellt werden. Die **Archivierung/Sicherung** sowie **Bereitstellung und Veröffentlichung** von Forschungsdaten mitsamt README-Dateien erhöht das Verständnis der Daten für andere Forschende und ermöglicht die Beurteilung, ob ein Datensatz für die eigene Forschung geeignet ist. In der Projekt-README-Datei wird abgebildet, in welcher Form und Struktur die **Datensammlung und -erfassung** erfolgt ist. Die **Anreicherung und Auswertung** der Daten wird durch die Dokumentation von genutzen Methoden und Software in den README-Dateien zu Unterverzeichnissen abgelegt. Die Bereitstellung von Metadaten in Form von README-Dateien ist somit Teil guter wissenschaftlicher Praxis und elementarer Bestandteil zur Umsetzung der FAIR-Prinzipien.
+
+## Metadaten: Warum sind sie wichtig?
+
+Metadaten sind Daten über Daten. Sie enthalten Informationen über die Quelle der Daten, ihre Struktur, das Datenerfassungsverfahren und vieles mehr. Ohne geeignete Metadaten ist das Verständnis der Datenqualität und -relevanz erheblich erschwert.
+
+README-Dateien spielen eine zentrale Rolle bei der Bereitstellung von Metadaten für lokale Datenverzeichnisse. README-Dateien bieten die Möglichkeit, die Datenstruktur, Herkunft, Nutzungshinweise und andere wichtige Informationen in einem klaren und leicht verständlichen Format zu dokumentieren. Sie dienen als erste Anlaufstelle für alle, die mit den Daten interagieren möchten, und ermöglichen eine effiziente und effektive Nachnutzung des Datenverzeichnisses.
+
+Aufgabe der README ist es also:
+
+- zu erklären, welche Informationen in den Daten repräsentiert sind (mit Kontext);
+
+- zu zeigen, wie die Daten verarbeitet wurden; zu zeigen, wie die Daten nachgenutzt werden können.
+
+Sinn der README ist,
+
+- die investierte Arbeit transparent werden zu lassen;
+
+- die Qualität des gesamten Datenbestands deutlich machen.
+
+In Anlehnung an [Ken Williams (1997)](https://web.archive.org/web/20121004221303/http://mathforum.org/ken/perl_modules.html#document) gilt: 
+
+> Deine Daten-Dokumentation in den READMEs ist dann vollständig, wenn jedermensch die Nützlichkeit der Daten beurteilen kann, ohne sie zu öffnen. Das ist wichtig, um die Nachnutzbarkeit der Daten möglichst umfangreich zu ermöglichen. Die Dokumentation, nicht die Daten sollten darüber bestimmen, ob Dein Datenbestand wertvoll ist.
+
+## Was sollte in einer README-Datei stehen?
+
+Inhalte der README-Dateien unterscheiden sich je nach Speicherort und Inhalt der Verzeichnisse. Jeder lokale Datenbestand für ein Projekt sollte in einem Stammordner liegen, der durch weitere, dem Datenbestand angepasste Verzeichnisse untergliedert ist. Für die Strukturierung von Unterverzeichnissen bieten sich Schemata an, die dem Projektverlauf folgen.
+
+::: info
+Die Strukturierung von Ordnern und die Benennung von Dateien wird hier nicht vertieft. Viele hilfreiche Hinweise bieten etwa das [Forschungsdatenzentram IANUS](https://ianus-fdz.de/it-empfehlungen/projektphasen/dateiverwaltung/dateiablage/) oder [VerbundFDB](https://www.forschungsdaten-bildung.de/dateien-benennen).
+:::
+
+### **README im Stammverzeichnis** {.kolophon .unnumbered .unlisted}
+
+Die README-Datei im Stammverzeichnis bietet eine umfassende Übersicht über das gesamte Datenverzeichnis. Hier finden Sie grundlegende Informationen zum Projekt, zur Gesamtstruktur des Datenverzeichnisses und wichtige Kontextinformationen. Die Bereitstellung einer klaren Auflistung der Dateien und Ordner in Ihrem lokalen Datenverzeichnis ist von entscheidender Bedeutung für die Benutzerfreundlichkeit und Verständlichkeit Ihres Projekts:
+
+1.  **Schnelle Orientierung:** Die Auflistung ermöglicht es Lesenden, sich schnell einen Überblick über den Inhalt des Datenverzeichnisses zu verschaffen. Dies ist besonders wichtig, wenn das Projekt mehrere Verzeichnisse und Dateien enthält.
+
+2.  **Strukturverständnis:** Durch die klare Aufschlüsselung der Verzeichnisstruktur können Benutzer die Hierarchie und Beziehungen zwischen verschiedenen Dateien und Ordnern besser verstehen. Dies fördert ein effizientes Arbeiten und Navigieren im Projekt.
+
+3.  **Auffinden von Schlüsseldateien:** Die Liste hilft Lesenden dabei, wichtige Dateien oder Ordner leicht zu identifizieren. Das ist besonders nützlich, wenn es bestimmte Daten oder Skripte gibt, auf die häufig zugegriffen wird.
+
+4.  **Dokumentation von Unterverzeichnissen:** Wenn Unterverzeichnisse spezifische Funktionen oder Daten beinhalten, bietet die Liste in der README eine einfache Möglichkeit, auf diese Unterverzeichnisse zu verweisen und ihre Bedeutung zu erklären.
+
+5.  **Datenverfügbarkeit und Aktualität:** Eine regelmäßig aktualisierte Liste signalisiert, dass die README-Datei eine zuverlässige Informationsquelle ist. Benutzer können sich darauf verlassen, dass sie eine aktuelle Übersicht über den Inhalt des Verzeichnisses erhalten.
+
+Daher ist das Hinzufügen einer gut strukturierten Liste von Dateien und Ordnern zu Ihrer README-Datei ein Schlüsselelement für eine effektive Dokumentation. Es verbessert nicht nur die Zugänglichkeit Ihrer Daten, sondern erleichtert auch die Zusammenarbeit und den Austausch von Informationen im Rahmen Ihres Projekts.
+
+### **README in Unterverzeichnissen** {.kolophon .unnumbered .unlisted}
+
+In Unterverzeichnissen können spezifischere README-Dateien vorhanden sein, um detaillierte Informationen zu den Daten in diesem Verzeichnis bereitzustellen. Diese README-Dateien können zusätzliche Details zur Datennutzung, Methodik oder anderen spezifischen Aspekten enthalten.
+
+### **Datensatz-README** {.kolophon .unnumbered .unlisted}
+
+Datensatz-READMEs können Teil einer Verzeichnis-README sein. Datensatz_READMEs beschreiben detailliert den jeweiligen Datensatz.
+
+## Technische Hinweise
+
+### Datenformate für README-Dateien {.kolophon .unnumbered .unlisted}
+
+README-Dateien sollten immer in reinen Textdateien gespeichert werden, die mit einfachen Texteditoren geöffnet und bearbeitet werden können. In der Regel haben diese Dateien die Dateinamens-Erweiterung `.txt`. Sehr geeignet für das Verfassen von README-Dateien ist [**Notepad++**](https://notepad-plus-plus.org/downloads/), das auch als portable-Version in Projektverzeichnissen mitgeliefert werden kann.
+
+Seit Etablierung von online-Repositorien wie [gitlab](https://gitlab.com/), [github](https://github.com/), [figshare](https://figshare.com/) oder [Dryad](https://datadryad.org), die [**Markdown**](https://de.wikipedia.org/wiki/Markdown)-Dateien unterstützen, werden viele README-Dateien in dieser Auszeichnungssprache verfasst. Markdown ist nicht standardisiert, die wesentlichen, für README-Dateien notwendigen Text-Auszeichnungen werden allerdings einheitlich behandelt:
+
+Beispiel der Datensatz-README-Datei als markdown gerendert:
+
+|  |
+|-------|
+| **Dateiname**: "hp_3D-Modelle.ods" |
+| **Autor:in**: "Doe, John" |
+| **Autor:in Readme**: "Doe, John" |
+| **Projekt**: "Heliopolis-Projekt" |
+| **Lizenz**: "cc0 Public Domain Dedication" |
+| **Beschreibung**: Tabellarische Auflistung der im Heliopolis-Projekt erstellten 3D-Modelle." |
+| **Einheiten**: "n.a." |
+| **Format**: "ods, OpenDocument Spreadsheet, Version 1.3" |
+| **Software**: "LibreOffice Version 7.6.2" |
+| **Prozessierung**: "Die Werte wurden händisch eingetragen." |
+| **Bezüge**: - Alle in der Tabelle genannten 3D-Modelle sind über das Verzeichnis `hp_daten_3D/modelle\` erschlossen. |
+| **Attributliste**: |
+| \| name \| typ \| beschreibung \| einheit \| werteliste \| link \| \|----\|----\|----\|----\|----\|----\| \| modell_id \| integer(32) \| interner Identifier des Modells \| - \| - \| https://www.wikidata.org/wiki/Q853614 \| \| benennung \| string \| Benennung des Objekts \| - \| - \| https://www.wikidata.org/wiki/Q1969448 \| \| methode \| string \| Erfassungsmethode des 3D-Modells \| - \| SFM, TLS, SLS \| https://www.wikidata.org/wiki/Q1172399 \| \| datum \| date (YYYYMMDD) \| Tag der Berechung des 3D-Modells\| - \| - \| https://www.wikidata.org/wiki/Q205892 \| |
+| **Codes**: - SFM: Structure from Motion - TLS: Terrestrial Laserscanning - SLS: Streifenlichtscanning |
+| **Qualität**: |
+| Liste wurde im Vier-Augen-Prinzip auf Vollständigkeit und Richtigkeit geprüft. |
+| **Genauigkeit**: sehr gut **Vollständigkeit**: sehr gut **Aktualität**: sehr gut **Zweckmäßigkeit**: Der Datensatz erschließt lediglich übersichtlich die im Projekt generierten 3D-Modelle. Im Projekt dienten die Daten keiner analytischen Auswertung. |
+
+## Tipp: Ordner- und Dateien auflisten
+
+**Windows: Auflistung der Dateien in einem Verzeichnis generieren**
+
+Um eine Liste der Dateien in einem Verzeichnis unter Windows zu erstellen, können Sie die Eingabeaufforderung (Command Prompt) oder den Datei-Explorer verwenden. Hier sind die Schritte für beide Methoden:
+
+1.  **Eingabeaufforderung (Command Prompt):**
+
+    - Drücken Sie die `Windows-Taste` + `R`, um das "Ausführen"-Fenster zu öffnen.
+
+    - Geben Sie `cmd` ein und drücken Sie `Enter`, um die Eingabeaufforderung zu öffnen.
+
+    - Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis. Zum Beispiel:
+
+      ```         
+      cd Pfad\zum\gewünschten\Verzeichnis
+      ```
+
+    - Geben Sie den Befehl `dir` ein und drücken Sie `Enter`. Dies zeigt eine Liste der Dateien im Verzeichnis an.
+
+      ```         
+      dir
+      ```
+
+2.  **Datei-Explorer:**
+
+    - Öffnen Sie den Datei-Explorer und navigieren Sie zum gewünschten Verzeichnis.
+
+    - Klicken Sie auf das Adressfeld, um den Pfad zu kopieren.
+
+    - Öffnen Sie die Eingabeaufforderung (wie im Schritt 1 beschrieben).
+
+    - Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis.
+
+    - Geben Sie den Befehl `dir` ein und fügen Sie dann den zuvor kopierten Pfad ein. Drücken Sie anschließend `Enter`.
+
+      ```         
+      dir Pfad\zum\gewünschten\Verzeichnis
+      ```
+
+Die Liste der Dateien im Verzeichnis wird in der Eingabeaufforderung angezeigt. Sie können auch zusätzliche Optionen wie `dir /B` verwenden, um nur die Dateinamen ohne zusätzliche Informationen anzuzeigen.
+
+Mit `dir /b > dateiliste.txt` wird die Dateiliste in einer Datei gespeichert.
+
+::: info
+Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/dir)):
+
+- /q Zeigt Dateibesitzinformationen an.
+
+- /w Zeigt die Auflistung im breiten Format (Wide-Format) an, wobei in jeder Zeile mindestens fünf Dateinamen oder Verzeichnisnamen vorhanden sind.
+
+- /d Zeigt die Auflistung im gleichen Format wie /w an, aber die Dateien werden nach Spalte sortiert.
+
+- /a\[\[:\]<attributes>\] Zeigt nur die Namen von Verzeichnissen und Dateien mit den von Ihnen angegebenen Attributen an. Wenn Sie diesen Parameter nicht verwenden, zeigt der Befehl die Namen aller Dateien mit Ausnahme ausgeblendeter und Systemdateien an. Wenn Sie diesen Parameter ohne Angabe von Attributen verwenden, zeigt der Befehl die Namen aller Dateien an, einschließlich ausgeblendeter und Systemdateien. Hier sehen Sie eine Liste der möglichen Attribute:
+
+  - d – Verzeichnisse
+  - h – ausgeblendete Dateien
+  - s - Systemdateien
+  - l – Analysepunkte
+  - r – schreibgeschützte Dateien
+  - a – für die Archivierung bereite Dateien
+  - i – Dateien ohne Inhaltsindizierung
+
+  Sie können eine beliebige Kombination dieser Werte verwenden. Trennen Sie die Werte jedoch nicht durch Leerzeichen. Optional können Sie einen Doppelpunkt (:) als Trennzeichen verwenden. Um Werte auszuschließen, können Sie einen Bindestrich (-) als Präfix verwenden. Mit dem Attribut -s beispielsweise werden die Systemdateien nicht angezeigt.
+
+- /o\[\[:\]<sortorder>\] Sortiert die Ausgabe nach Sortierreihenfolge, die eine beliebige Kombination der folgenden Werte sein kann:
+
+  n – alphabetisch nach Name e – alphabetisch nach Erweiterung g – Verzeichnisse zuerst gruppieren s – nach Größe, kleinste Elemente zuerst d – nach Datum/Uhrzeit, älteste Elemente zuerst Zum Umkehren der Sortierreihenfolge Präfix - verwenden
+
+  Mehrere Werte werden in der Reihenfolge verarbeitet, in der Sie sie auflisten. Trennen Sie mehrere Werte nicht mit Leerzeichen. Optional können Sie einen Doppelpunkt (:) verwenden.
+
+  Wenn die Sortierreihenfolge nicht angegeben ist, listet dir /o die Verzeichnisse alphabetisch auf, gefolgt von den Dateien, die ebenfalls alphabetisch sortiert sind.
+
+- /t\[\[:\]<timefield>\] Gibt an, welches Zeitfeld zum Sortieren angezeigt oder verwendet werden soll. Die verfügbaren Werte für Zeitfeld lauten:
+
+  c – Erstellung a – letzter Zugriff w – letzter Schreibvorgang
+
+- /s Listet jedes Vorkommen des angegebenen Dateinamens im angegebenen Verzeichnis und in allen Unterverzeichnissen auf.
+
+- /b Zeigt eine Liste von Verzeichnissen und Dateien ohne zusätzliche Informationen an. Der Parameter /b überschreibt den Parameter /w.
+
+- /l Zeigt nicht sortierte Verzeichnisnamen und Dateinamen in Kleinbuchstaben an.
+
+- /n Zeigt eine lange Liste mit Dateinamen ganz rechts auf dem Bildschirm an.
+
+- /x Zeigt die kurzen Namen an, die für Nicht-8dot3-Dateinamen generiert werden. Die Anzeige entspricht der Anzeige mit /n, der kurze Name wird jedoch vor dem langen Namen eingefügt.
+
+- /c Zeigt das Tausendertrennzeichen bei Dateigrößen an. Dies ist das Standardverhalten. Verwenden Sie /-c, um Trennzeichen auszublenden.
+
+- /4 Zeigt Jahresangaben im vierstelligen Format an.
+
+**Beispiele**
+
+Um alle Verzeichnisse nacheinander in alphabetischer Reihenfolge im Wide-Format anzuzeigen und nach jedem Bildschirm anzuhalten, stellen Sie sicher, dass das Stammverzeichnis das aktuelle Verzeichnis ist, und geben Sie dann Folgendes ein:
+
+`dir /s/w/o/p`
+
+Die Ausgabe listet das Stammverzeichnis, die Unterverzeichnisse und die Dateien im Stammverzeichnis einschließlich Erweiterungen auf. Dieser Befehl listet auch die Unterverzeichnisnamen und die Dateinamen in jedem Unterverzeichnis in der Struktur auf.
+
+Wenn Sie das vorherige Beispiel so ändern möchten, dass dir die Dateinamen und Erweiterungen anzeigt, aber die Verzeichnisnamen weglässt, geben Sie Folgendes ein:
+
+`dir /s/w/o/p/a:-`
+:::
+
+**Die Alternative zu `dir`: `tree`**
+
+Einen Verzeichnisbaum in eine Textdatei speichern: 1. Verzeichnis in der Konsole aufrufen 2. mit `tree /f /a |clip` Ordnerstruktur inkl. Dateinamen in die Zwischenablage kopieren (mit `tree /a |clip` werden nur die Ordner berücksichtigt\`) 3. Texteditor öffnen und mit STRG-V den Inhalt einfügen
+
+Erläuterung:
+
+Der Befehlt `tree` generiert nicht-Unicode-konforme Zeichen. Eine Speicherung der Daten mit `> Ordnerliste.txt` wie im Beispiel mit `dir` oben überträgt den Inhalt . Die Option `|clip` kopiert die Ausgabe des Befehls in die Zwischenablage. Mit STRG-V kann der Inhalt in eine Text-Datei eingefügt werden.
+
+## Templates: Was sollte in einer README-Datei stehen?
+
+### Template: README im Stammverzeichnis
+
+``` ascii
+Projekt-Titel: [Titel des Projekts]
+
+Projekt-Titel-Abkürzung: [Abürzung/Akronym des Projekts]
+
+Autor:in Readme: [Name], [Vorname]
+
+Projektbeteiligte: 
+[Name], [Vorname], [Rolle], [Institution], [ORCID oder anderer Identifier (optional)]
+
+Beteiligte Institutionen:
+[Auflistung]
+
+Kontakt: [Name], [Vorname], [Adresse], [E-Mail]
+
+Datum: [Projekt von - bis]
+
+Beschreibung: [Kurzbeschreibung des Projekts]
+
+Bezüge: [Bezüge zu anderen/verwandten Projekten]
+
+Verzeichnis-Struktur:
+[Erläuterung der (Unter-)Verzeichnisse]
+
+Software:
+[Liste der genutzten Software]
+
+Räumliche Abdeckung:
+[Lat/Lon oder MinimumBoundingBox (in WGS84) oder Stadt/Region, Provinz/Bundesland, Land]
+
+Zeitliche Abdeckung:
+[zeitlicher Bezug der Daten von - bis]
+
+Lizenz:
+[Lizenzangabe zu Inhalten der Projektergebnisse falls nicht anders angegeben]
+
+Empfohlene Zitierweise:
+[Zitat]
+```
+
+### Template: README-Dateien in Unterverzeichnissen
+
+``` ascii
+Projekt-Titel: [Titel des Projekts]
+
+Projekt-Titel-Abkürzung: [Abürzung/Akronym des Projekts]
+
+Autor:in Readme: [Name], [Vorname]
+
+Verzeichnis-Struktur:
+[Erläuterung der (Unter-)Verzeichnisse]
+
+Methoden: [Methoden zur Datenerfassung]
+
+-----
+
+Optional:
+
+Verzeichnisinhalt: [Liste der Dateien]
+
+Bezüge der Dateien: [Bezüge von Dateien untereinander]
+
+(ggf. Einzelheiten zu Datensätzen, vgl. unten Datensatz-README)
+```
+
+Datensatz-READMEs können Teil einer Verzeichnis-README sein.
+
+``` ascii
+Dateiname:
+Autor:in: [Name], [Vorname]
+Autor:in Readme: [Name], [Vorname]
+Projekt: [Titel des Projekts]
+
+Beschreibung: [Kurze Beschreibung]
+Einheiten: [im Datensatz genutzte Einheiten (Meter etc.)]
+Format: [Dateiformat]
+Software: [mit welcher Software erstellt?]
+Prozessierung: [Details zur Prozessierung und der Algorithmik]
+Bezüge:
+[Liste im Datensatz berücksichtiger Fremddaten mit Nutzungslinzenzen]
+
+Im Falle tabellarischer Daten oder Attribut-Wert-Tabellen:
+
+| name               | typ      | beschreibung       | einheit                   | werteliste                  | link                   |
+|--------------------|----------|--------------------|---------------------------|-----------------------------|------------------------|
+| name des Attributs | Datentyp | Kurze Beschreibung | ggf. Einheit (e.g. Meter) | ggf. Werteliste (Vokabular) | ggf. Link zu Ontologie |
+|                    |          |                    |                           |                             |                        |
+|                    |          |                    |                           |                             |                        |
+Codes:
+[Liste von verwendeten Abkürzungen/Codes]
+
+Qualität:
+[Beschreibende Hinweise zur Datenqualität. ggf. aufgeschlüsselt nach Aspekten]
+Genauigkeit: (i.S.v. Präzision, Richtigkeit)
+Vollständigkeit:
+Aktualität:
+Zweckmäßigkeit: (i.S.v. Anwendungsszenarien für Datensatz)
+```
+
+### Template Datensatz-README
+
+``` ascii
+Dateiname: [Name der Datei mit Endung]
+Autor:in: [Name], [Vorname]
+Autor:in Readme: [Name], [Vorname]
+
+Beschreibung: [Kurze Beschreibung]
+Einheiten: [im Datensatz genutzte Einheiten (Meter etc.)]
+Format: [Dateiformat]
+Software: [mit welcher Software erstellt?]
+Prozessierung: [Details zur Prozessierung und der Algorithmik]
+Bezüge:
+[Liste im Datensatz berücksichtiger Fremddaten mit Nutzungslinzenzen]
+
+Im Falle tabellarischer Daten oder Attribut-Wert-Tabellen:
+
+| name               | typ      | beschreibung       | einheit                   | werteliste                  | link                   |
+|--------------------|----------|--------------------|---------------------------|-----------------------------|------------------------|
+| name des Attributs | Datentyp | Kurze Beschreibung | ggf. Einheit (e.g. Meter) | ggf. Werteliste (Vokabular) | ggf. Link zu Ontologie |
+|                    |          |                    |                           |                             |                        |
+|                    |          |                    |                           |                             |                        |
+Codes:
+[Liste von verwendeten Abkürzungen/Codes]
+
+Qualität:
+[Beschreibende Hinweise zur Datenqualität. ggf. aufgeschlüsselt nach Aspekten]
+Genauigkeit: (i.S.v. Präzision, Richtigkeit)
+Vollständigkeit:
+Aktualität:
+Zweckmäßigkeit: (i.S.v. Anwendungsszenarien für Datensatz)
+```
+
+## Weiterführende Quellen und Informationen {.appendix .unnumbered}
+
+<!-- Der Ort für weiterführende Quellen und Informationen. Wenn Sie Fußnoten oder Literaturverweise im Text eingefügt haben, werden die bibliographischen Angaben automatisch in weiteren Abschnitten generiert und in das Dokument eingefügt. -->
+
+## Nachnutzen {.appendix .unnumbered}
+
+Alle sind herzlich eingeladen, diesen Baustein und die zugehörige Copyleft-Lizenz zu nutzen, um ihr Wissen und Expertise in die Verbesserung und Aktualisierung einzubringen. Alle können die Inhalte erweitern oder überarbeiten, zum Beispiel um Anwendungsszenarien und Nutzungskontexte zu erweitern.
+
+Unser Wunsch ist ein lebendiges, stetig wachsendes Dokument, das sich durch die Beiträge vieler verändert - im Einklang mit eines sich wandelnden Umfelds. Wir freuen uns im Falle einer Überarbeitung über eine kurze Notiz – das ist aber selbstverständlich keine Pflicht.
+
+<!-- Verweise auf Website und Repository werden in _oer_metadata.yml global festgelegt. Wenn die OER nicht in einem git-Repository gehostet oder online bereitgestellt werden, können die folgenden zwei Zeilen gelöscht werden. -->
+
+:link: [Dieser Baustein als Website]({{< meta site-url >}})
+
+:link: [Quarto-Quellcode dieses Bausteins]({{< meta repo-url >}})
+
+------------------------------------------------------------------------
+
+Dieses Skript nutzt das [OER-Skript-Template von NFDI4Objects](https://github.com/nfdi4objects/oer-template-skript)
+
+## Disclaimer: Einsatz von LLM {.appendix .unnumbered}
+
+Bei der Erstellung dieses Templates wurden keine KI-basierten Werkzeuge eingesetzt.
+
+<!-- Optionale Angaben zum Einsatz von LLM bei der Erstellung oder Überarbeitung des Skripts -->
+
+```{=html}
+<!-- An dieser Stelle werden von Quarto automatisch generierte Abschnitte angehängt:
+
+Bibliographie:
+Erstellt aus den in der qmd-Datei mit [@bibtex-Schlüssel] referenzierten Einträgen aus der Datei bibliographie.bib.
+Im Text nicht referenzierte Einträge aus der bibliographie.bib werden nicht zitiert.
+Der Zitierstil wird in der _oer_metadata.yml mit dem Schlüssel 'csl:' festgelegt. Im Verzeichnis /assets/csl/ sind gängige Zitierstile als csl-Datei vorhanden. Weitere sind hier zu finden: https://www.zotero.org/styles
+
+Lizenz:
+Angabe wird übernommen aus Schlüssel 'license:' in _oer_metadata.yml
+
+Urheber:innen
+Angabe wird übernommen aus der _oer_metadata.yml Schlüssel 'copyright:'
+
+Zitiervorschläge
+Mit BibTeX zitieren:
+Automatisch von Quarto aus den Metadaten insb. aus dem Schlüssel 'citation:' in der _oer_metadata.yml generiertes bibtex-Zitat.
+
+Bitte zitieren Sie diesen OER-Baustein als:
+Angabe generiert aus:
+  _autor_innen.yml
+  Schlüssel 'title:' in der qmd-Datei
+  Schlüssel 'issued' in der _oer_metadata.yml
+  Schlüssel 'doi:' in der _oer_metadata.yml / Wenn keine doi gesetzt wird der Titel mit dem Wert aus 'site-url:' in _oer_metadata.yml verlinkt.
+-->
+```
