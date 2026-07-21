@@ -27,8 +27,8 @@ keywords:
   - README
   
 # Technische Metadaten
-site-url: &site https://nfdi4objects.github.io/oer-template-skript/
-repo-url: &repo https://github.com/nfdi4objects/oer-template-skript
+site-url: &site https://lobstermatic.github.io/oer-skript-READMEs/
+repo-url: &repo https://github.com/Lobstermatic/oer-skript-READMEs
 doi: XXXXXXX.XXXXXXX
 
 # Vorgaben für den Appendix "Zitat"
