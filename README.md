@@ -2,7 +2,12 @@
 
 Dieses Repository enthält einen OER-Baustein für das Skript zum Thema "README-Dateien für lokale Datenverzeichnisse" (index.qmd)
 
-Im Ordner "img" befindet sich das Bildmaterial, das in der Übung verwendet wird. Die Metadaten für den OER-Baustein befinden sich in den Dateien "autor_innen.yml", "oer_metadata.yml" und im Header der qmd-Datei.
+Im Ordner "data" finden Sie drei Templates zu READMEs: 
+- READMEs in Stammverzeichnissen
+- READMEs in Unterverzeichnissen
+- READMEs für Datensätze
+
+<!-- Im Ordner "img" befindet sich das Bildmaterial, das in der Übung verwendet wird. Die Metadaten für den OER-Baustein befinden sich in den Dateien "autor_innen.yml", "oer_metadata.yml" und im Header der qmd-Datei. -->
 
 ## Open Educational Resources (OER)
 

@@ -43,7 +43,7 @@ citation:
   license: "https://creativecommons.org/licenses/by/4.0/"
 
 # Rechtliche Metadaten
-copyright: "Freitext-Angaben zu Inhaber:innen des Urheberrechts an den Inhalten (Anzupassen im Schlüssel `copyright` in der Datei `_oer_metadata.yml`)"
+copyright: "Bruhn, Kai-Christian"
 license: CC BY # # Optionen für Lizensierungsangaben: https://quarto.org/docs/authoring/front-matter.html#license. Wird übernommen in automatisch erstellten Appendix "Lizenz".
 
 # Spezifische Metadaten für den Export in fachliche Metadatenschemata

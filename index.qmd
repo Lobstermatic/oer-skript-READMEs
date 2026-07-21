@@ -73,7 +73,7 @@ Inhalte der README-Dateien unterscheiden sich je nach Speicherort und Inhalt der
 Die Strukturierung von Ordnern und die Benennung von Dateien wird hier nicht vertieft. Viele hilfreiche Hinweise bieten etwa das [Forschungsdatenzentram IANUS](https://ianus-fdz.de/it-empfehlungen/projektphasen/dateiverwaltung/dateiablage/) oder [VerbundFDB](https://www.forschungsdaten-bildung.de/dateien-benennen).
 :::
 
-### **README im Stammverzeichnis** {.kolophon .unnumbered .unlisted}
+### README im Stammverzeichnis
 
 Die README-Datei im Stammverzeichnis bietet eine umfassende Übersicht über das gesamte Datenverzeichnis. Hier finden Sie grundlegende Informationen zum Projekt, zur Gesamtstruktur des Datenverzeichnisses und wichtige Kontextinformationen. Die Bereitstellung einer klaren Auflistung der Dateien und Ordner in Ihrem lokalen Datenverzeichnis ist von entscheidender Bedeutung für die Benutzerfreundlichkeit und Verständlichkeit Ihres Projekts:
 
@@ -89,17 +89,17 @@ Die README-Datei im Stammverzeichnis bietet eine umfassende Übersicht über das
 
 Daher ist das Hinzufügen einer gut strukturierten Liste von Dateien und Ordnern zu Ihrer README-Datei ein Schlüsselelement für eine effektive Dokumentation. Es verbessert nicht nur die Zugänglichkeit Ihrer Daten, sondern erleichtert auch die Zusammenarbeit und den Austausch von Informationen im Rahmen Ihres Projekts.
 
-### **README in Unterverzeichnissen** {.kolophon .unnumbered .unlisted}
+### README in Unterverzeichnissen 
 
 In Unterverzeichnissen können spezifischere README-Dateien vorhanden sein, um detaillierte Informationen zu den Daten in diesem Verzeichnis bereitzustellen. Diese README-Dateien können zusätzliche Details zur Datennutzung, Methodik oder anderen spezifischen Aspekten enthalten.
 
-### **Datensatz-README** {.kolophon .unnumbered .unlisted}
+### Datensatz-README
 
 Datensatz-READMEs können Teil einer Verzeichnis-README sein. Datensatz_READMEs beschreiben detailliert den jeweiligen Datensatz.
 
 ## Technische Hinweise
 
-### Datenformate für README-Dateien {.kolophon .unnumbered .unlisted}
+### Datenformate für README-Dateien
 
 README-Dateien sollten immer in reinen Textdateien gespeichert werden, die mit einfachen Texteditoren geöffnet und bearbeitet werden können. In der Regel haben diese Dateien die Dateinamens-Erweiterung `.txt`. Sehr geeignet für das Verfassen von README-Dateien ist [**Notepad++**](https://notepad-plus-plus.org/downloads/), das auch als portable-Version in Projektverzeichnissen mitgeliefert werden kann.
 
@@ -239,142 +239,6 @@ Erläuterung:
 
 Der Befehlt `tree` generiert nicht-Unicode-konforme Zeichen. Eine Speicherung der Daten mit `> Ordnerliste.txt` wie im Beispiel mit `dir` oben überträgt den Inhalt . Die Option `|clip` kopiert die Ausgabe des Befehls in die Zwischenablage. Mit STRG-V kann der Inhalt in eine Text-Datei eingefügt werden.
 
-## Templates: Was sollte in einer README-Datei stehen?
-
-### Template: README im Stammverzeichnis
-
-``` ascii
-Projekt-Titel: [Titel des Projekts]
-
-Projekt-Titel-Abkürzung: [Abürzung/Akronym des Projekts]
-
-Autor:in Readme: [Name], [Vorname]
-
-Projektbeteiligte: 
-[Name], [Vorname], [Rolle], [Institution], [ORCID oder anderer Identifier (optional)]
-
-Beteiligte Institutionen:
-[Auflistung]
-
-Kontakt: [Name], [Vorname], [Adresse], [E-Mail]
-
-Datum: [Projekt von - bis]
-
-Beschreibung: [Kurzbeschreibung des Projekts]
-
-Bezüge: [Bezüge zu anderen/verwandten Projekten]
-
-Verzeichnis-Struktur:
-[Erläuterung der (Unter-)Verzeichnisse]
-
-Software:
-[Liste der genutzten Software]
-
-Räumliche Abdeckung:
-[Lat/Lon oder MinimumBoundingBox (in WGS84) oder Stadt/Region, Provinz/Bundesland, Land]
-
-Zeitliche Abdeckung:
-[zeitlicher Bezug der Daten von - bis]
-
-Lizenz:
-[Lizenzangabe zu Inhalten der Projektergebnisse falls nicht anders angegeben]
-
-Empfohlene Zitierweise:
-[Zitat]
-```
-
-### Template: README-Dateien in Unterverzeichnissen
-
-``` ascii
-Projekt-Titel: [Titel des Projekts]
-
-Projekt-Titel-Abkürzung: [Abürzung/Akronym des Projekts]
-
-Autor:in Readme: [Name], [Vorname]
-
-Verzeichnis-Struktur:
-[Erläuterung der (Unter-)Verzeichnisse]
-
-Methoden: [Methoden zur Datenerfassung]
-
------
-
-Optional:
-
-Verzeichnisinhalt: [Liste der Dateien]
-
-Bezüge der Dateien: [Bezüge von Dateien untereinander]
-
-(ggf. Einzelheiten zu Datensätzen, vgl. unten Datensatz-README)
-```
-
-Datensatz-READMEs können Teil einer Verzeichnis-README sein.
-
-``` ascii
-Dateiname:
-Autor:in: [Name], [Vorname]
-Autor:in Readme: [Name], [Vorname]
-Projekt: [Titel des Projekts]
-
-Beschreibung: [Kurze Beschreibung]
-Einheiten: [im Datensatz genutzte Einheiten (Meter etc.)]
-Format: [Dateiformat]
-Software: [mit welcher Software erstellt?]
-Prozessierung: [Details zur Prozessierung und der Algorithmik]
-Bezüge:
-[Liste im Datensatz berücksichtiger Fremddaten mit Nutzungslinzenzen]
-
-Im Falle tabellarischer Daten oder Attribut-Wert-Tabellen:
-
-| name               | typ      | beschreibung       | einheit                   | werteliste                  | link                   |
-|--------------------|----------|--------------------|---------------------------|-----------------------------|------------------------|
-| name des Attributs | Datentyp | Kurze Beschreibung | ggf. Einheit (e.g. Meter) | ggf. Werteliste (Vokabular) | ggf. Link zu Ontologie |
-|                    |          |                    |                           |                             |                        |
-|                    |          |                    |                           |                             |                        |
-Codes:
-[Liste von verwendeten Abkürzungen/Codes]
-
-Qualität:
-[Beschreibende Hinweise zur Datenqualität. ggf. aufgeschlüsselt nach Aspekten]
-Genauigkeit: (i.S.v. Präzision, Richtigkeit)
-Vollständigkeit:
-Aktualität:
-Zweckmäßigkeit: (i.S.v. Anwendungsszenarien für Datensatz)
-```
-
-### Template Datensatz-README
-
-``` ascii
-Dateiname: [Name der Datei mit Endung]
-Autor:in: [Name], [Vorname]
-Autor:in Readme: [Name], [Vorname]
-
-Beschreibung: [Kurze Beschreibung]
-Einheiten: [im Datensatz genutzte Einheiten (Meter etc.)]
-Format: [Dateiformat]
-Software: [mit welcher Software erstellt?]
-Prozessierung: [Details zur Prozessierung und der Algorithmik]
-Bezüge:
-[Liste im Datensatz berücksichtiger Fremddaten mit Nutzungslinzenzen]
-
-Im Falle tabellarischer Daten oder Attribut-Wert-Tabellen:
-
-| name               | typ      | beschreibung       | einheit                   | werteliste                  | link                   |
-|--------------------|----------|--------------------|---------------------------|-----------------------------|------------------------|
-| name des Attributs | Datentyp | Kurze Beschreibung | ggf. Einheit (e.g. Meter) | ggf. Werteliste (Vokabular) | ggf. Link zu Ontologie |
-|                    |          |                    |                           |                             |                        |
-|                    |          |                    |                           |                             |                        |
-Codes:
-[Liste von verwendeten Abkürzungen/Codes]
-
-Qualität:
-[Beschreibende Hinweise zur Datenqualität. ggf. aufgeschlüsselt nach Aspekten]
-Genauigkeit: (i.S.v. Präzision, Richtigkeit)
-Vollständigkeit:
-Aktualität:
-Zweckmäßigkeit: (i.S.v. Anwendungsszenarien für Datensatz)
-```
-
 ## Weiterführende Quellen und Informationen {.appendix .unnumbered}
 
 - [@yao2015]
@@ -403,7 +267,7 @@ Dieses Skript nutzt das [OER-Skript-Template von NFDI4Objects](https://github.co
 
 ## Disclaimer: Einsatz von LLM {.appendix .unnumbered}
 
-Bei der Erstellung dieses Templates wurden keine KI-basierten Werkzeuge eingesetzt.
+Bei der Erstellung dieser OER wurden keine KI-basierten Werkzeuge eingesetzt.
 
 
 ```{=html}
