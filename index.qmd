@@ -169,7 +169,7 @@ Beispiel der Datensatz-README-Datei als markdown gerendert:
 
 ## Tipp: Ordner- und Dateien auflisten
 
-**Windows: Auflistung der Dateien in einem Verzeichnis generieren**
+### Windows: Auflistung der Dateien in einem Verzeichnis generieren
 
 Um eine Liste der Dateien in einem Verzeichnis unter Windows zu erstellen, können Sie die Eingabeaufforderung (Command Prompt) oder den Datei-Explorer verwenden. Hier sind die Schritte für beide Methoden:
 
@@ -209,20 +209,20 @@ Um eine Liste der Dateien in einem Verzeichnis unter Windows zu erstellen, könn
   ```
 :::
 
-Die Liste der Dateien im Verzeichnis wird in der Eingabeaufforderung angezeigt. Sie können auch zusätzliche Optionen wie `dir /B` verwenden, um nur die Dateinamen ohne zusätzliche Informationen anzuzeigen.
+Die Liste der Dateien im Verzeichnis wird in der Eingabeaufforderung angezeigt. Sie können auch zusätzliche Optionen wie `dir \b` verwenden, um nur die Dateinamen ohne zusätzliche Informationen anzuzeigen.
 
-Mit `dir /b > dateiliste.txt` wird die Dateiliste in einer Datei gespeichert.
+Mit `dir \b > dateiliste.txt` wird die Dateiliste in einer Datei gespeichert.
 
 ::: info
 Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/dir)):
 
-- \q Zeigt Dateibesitzinformationen an.
+- \\q zeigt Dateibesitzinformationen an.
 
-- \w Zeigt die Auflistung im breiten Format (Wide-Format) an, wobei in jeder Zeile mindestens fünf Dateinamen oder Verzeichnisnamen vorhanden sind.
+- \\w zeigt die Auflistung im breiten Format (Wide-Format) an, wobei in jeder Zeile mindestens fünf Dateinamen oder Verzeichnisnamen vorhanden sind.
 
-- \d Zeigt die Auflistung im gleichen Format wie \w an, aber die Dateien werden nach Spalte sortiert.
+- \\d zeigt die Auflistung im gleichen Format wie \w an, aber die Dateien werden nach Spalte sortiert.
 
-- \a[[:]<attributes>\] Zeigt nur die Namen von Verzeichnissen und Dateien mit den von Ihnen angegebenen Attributen an. Wenn Sie diesen Parameter nicht verwenden, zeigt der Befehl die Namen aller Dateien mit Ausnahme ausgeblendeter und Systemdateien an. Wenn Sie diesen Parameter ohne Angabe von Attributen verwenden, zeigt der Befehl die Namen aller Dateien an, einschließlich ausgeblendeter und Systemdateien. Hier sehen Sie eine Liste der möglichen Attribute:
+- \\a:\<attributes\> zeigt nur die Namen von Verzeichnissen und Dateien mit den von Ihnen angegebenen Attributen an. Wenn Sie diesen Parameter nicht verwenden, zeigt der Befehl die Namen aller Dateien mit Ausnahme ausgeblendeter und Systemdateien an. Wenn Sie diesen Parameter ohne Angabe von Attributen verwenden, zeigt der Befehl die Namen aller Dateien an, einschließlich ausgeblendeter und Systemdateien. Hier sehen Sie eine Liste der möglichen Attribute:
 
   - d – Verzeichnisse
   - h – ausgeblendete Dateien
@@ -234,7 +234,7 @@ Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.micros
 
   Sie können eine beliebige Kombination dieser Werte verwenden. Trennen Sie die Werte jedoch nicht durch Leerzeichen. Optional können Sie einen Doppelpunkt (:) als Trennzeichen verwenden. Um Werte auszuschließen, können Sie einen Bindestrich (-) als Präfix verwenden. Mit dem Attribut -s beispielsweise werden die Systemdateien nicht angezeigt.
 
-- \o\[\[:\]<sortorder>\] Sortiert die Ausgabe nach Sortierreihenfolge, die eine beliebige Kombination der folgenden Werte sein kann:
+- \\o:\<sortorder\> sortiert die Ausgabe nach Sortierreihenfolge, die eine beliebige Kombination der folgenden Werte sein kann:
 
   - n – alphabetisch nach Name
   - e – alphabetisch nach Erweiterung
@@ -244,27 +244,27 @@ Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.micros
 
   Mehrere Werte werden in der Reihenfolge verarbeitet, in der Sie sie auflisten. Trennen Sie mehrere Werte nicht mit Leerzeichen. Optional können Sie einen Doppelpunkt (:) verwenden.
 
-  Wenn die Sortierreihenfolge nicht angegeben ist, listet dir \o die Verzeichnisse alphabetisch auf, gefolgt von den Dateien, die ebenfalls alphabetisch sortiert sind.
+  Wenn die Sortierreihenfolge nicht angegeben ist, listet dir \\o die Verzeichnisse alphabetisch auf, gefolgt von den Dateien, die ebenfalls alphabetisch sortiert sind.
 
-- \t[\[:\]<timefield>\] Gibt an, welches Zeitfeld zum Sortieren angezeigt oder verwendet werden soll. Die verfügbaren Werte für Zeitfeld lauten:
+- \\t:\<timefield\> gibt an, welches Zeitfeld zum Sortieren angezeigt oder verwendet werden soll. Die verfügbaren Werte für Zeitfeld lauten:
 
   - c – Erstellung
   - a – letzter Zugriff
   - w – letzter Schreibvorgang
 
-- \s Listet jedes Vorkommen des angegebenen Dateinamens im angegebenen Verzeichnis und in allen Unterverzeichnissen auf.
+- \\s listet jedes Vorkommen des angegebenen Dateinamens im angegebenen Verzeichnis und in allen Unterverzeichnissen auf.
 
-- \b Zeigt eine Liste von Verzeichnissen und Dateien ohne zusätzliche Informationen an. Der Parameter \b überschreibt den Parameter \w.
+- \\b zeigt eine Liste von Verzeichnissen und Dateien ohne zusätzliche Informationen an. Der Parameter \\b überschreibt den Parameter \\w.
 
-- \l Zeigt nicht sortierte Verzeichnisnamen und Dateinamen in Kleinbuchstaben an.
+- \\l zeigt nicht sortierte Verzeichnisnamen und Dateinamen in Kleinbuchstaben an.
 
-- \n Zeigt eine lange Liste mit Dateinamen ganz rechts auf dem Bildschirm an.
+- \\n zeigt eine lange Liste mit Dateinamen ganz rechts auf dem Bildschirm an.
 
-- \x Zeigt die kurzen Namen an, die für Nicht-8dot3-Dateinamen generiert werden. Die Anzeige entspricht der Anzeige mit \n, der kurze Name wird jedoch vor dem langen Namen eingefügt.
+- \\x zeigt die kurzen Namen an, die für Nicht-8dot3-Dateinamen generiert werden. Die Anzeige entspricht der Anzeige mit \\n, der kurze Name wird jedoch vor dem langen Namen eingefügt.
 
-- \c Zeigt das Tausendertrennzeichen bei Dateigrößen an. Dies ist das Standardverhalten. Verwenden Sie -c, um Trennzeichen auszublenden.
+- \\c zeigt das Tausendertrennzeichen bei Dateigrößen an. Dies ist das Standardverhalten. Verwenden Sie -c, um Trennzeichen auszublenden.
 
-- \\4 Zeigt Jahresangaben im vierstelligen Format an.
+- \\4 zeigt Jahresangaben im vierstelligen Format an.
 
 **Beispiele**
 
@@ -279,7 +279,7 @@ Wenn Sie das vorherige Beispiel so ändern möchten, dass dir die Dateinamen und
 `dir \s\w\o\p\a:-`
 :::
 
-**Die Alternative zu `dir`: `tree`**
+### Die Alternative zu `dir`: `tree`
 
 Einen Verzeichnisbaum in eine Textdatei speichern:
 
