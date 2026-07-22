@@ -71,6 +71,8 @@ Inhalte der README-Dateien unterscheiden sich je nach Speicherort und Inhalt der
 
 ::: info
 Die Strukturierung von Ordnern und die Benennung von Dateien wird hier nicht vertieft. Viele hilfreiche Hinweise bieten etwa das [Forschungsdatenzentram IANUS](https://ianus-fdz.de/it-empfehlungen/projektphasen/dateiverwaltung/dateiablage/) oder [VerbundFDB](https://www.forschungsdaten-bildung.de/dateien-benennen).
+
+Zum Selbststudium bietet NFDI4Objects auch das Skript ["Einführung in die Datenorganisation"](https://n4o.pages.gitlab.rlp.net/workshops/n4o_fdm_ecr_cm2025/02_datenorganisation/) an.
 :::
 
 ### README im Stammverzeichnis
@@ -89,7 +91,7 @@ Die README-Datei im Stammverzeichnis bietet eine umfassende Übersicht über das
 
 Daher ist das Hinzufügen einer gut strukturierten Liste von Dateien und Ordnern zu Ihrer README-Datei ein Schlüsselelement für eine effektive Dokumentation. Es verbessert nicht nur die Zugänglichkeit Ihrer Daten, sondern erleichtert auch die Zusammenarbeit und den Austausch von Informationen im Rahmen Ihres Projekts.
 
-### README in Unterverzeichnissen 
+### README in Unterverzeichnissen
 
 In Unterverzeichnissen können spezifischere README-Dateien vorhanden sein, um detaillierte Informationen zu den Daten in diesem Verzeichnis bereitzustellen. Diese README-Dateien können zusätzliche Details zur Datennutzung, Methodik oder anderen spezifischen Aspekten enthalten.
 
@@ -107,25 +109,63 @@ Seit Etablierung von online-Repositorien wie [gitlab](https://gitlab.com/), [git
 
 Beispiel der Datensatz-README-Datei als markdown gerendert:
 
-|  |
-|------------------------------------------------------------------------|
-| **Dateiname**: "hp_3D-Modelle.ods" |
-| **Autor:in**: "Doe, John" |
-| **Autor:in Readme**: "Doe, John" |
-| **Projekt**: "Heliopolis-Projekt" |
-| **Lizenz**: "cc0 Public Domain Dedication" |
-| **Beschreibung**: Tabellarische Auflistung der im Heliopolis-Projekt erstellten 3D-Modelle." |
-| **Einheiten**: "n.a." |
-| **Format**: "ods, OpenDocument Spreadsheet, Version 1.3" |
-| **Software**: "LibreOffice Version 7.6.2" |
-| **Prozessierung**: "Die Werte wurden händisch eingetragen." |
-| **Bezüge**: - Alle in der Tabelle genannten 3D-Modelle sind über das Verzeichnis `hp_daten_3D/modelle\` erschlossen. |
-| **Attributliste**: |
-| \| name \| typ \| beschreibung \| einheit \| werteliste \| link \| \|----\|----\|----\|----\|----\|----\| \| modell_id \| integer(32) \| interner Identifier des Modells \| - \| - \| https://www.wikidata.org/wiki/Q853614 \| \| benennung \| string \| Benennung des Objekts \| - \| - \| https://www.wikidata.org/wiki/Q1969448 \| \| methode \| string \| Erfassungsmethode des 3D-Modells \| - \| SFM, TLS, SLS \| https://www.wikidata.org/wiki/Q1172399 \| \| datum \| date (YYYYMMDD) \| Tag der Berechung des 3D-Modells\| - \| - \| https://www.wikidata.org/wiki/Q205892 \| |
-| **Codes**: - SFM: Structure from Motion - TLS: Terrestrial Laserscanning - SLS: Streifenlichtscanning |
-| **Qualität**: |
-| Liste wurde im Vier-Augen-Prinzip auf Vollständigkeit und Richtigkeit geprüft. |
-| **Genauigkeit**: sehr gut **Vollständigkeit**: sehr gut **Aktualität**: sehr gut **Zweckmäßigkeit**: Der Datensatz erschließt lediglich übersichtlich die im Projekt generierten 3D-Modelle. Im Projekt dienten die Daten keiner analytischen Auswertung. |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                                          |
++==========================================================================================================================================================================+
+| **Dateiname**: "hp_3D-Modelle.ods"                                                                                                                                       |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Autor:in**: "Doe, John"                                                                                                                                                |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Autor:in Readme**: "Doe, John"                                                                                                                                         |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Projekt**: "Heliopolis-Projekt"                                                                                                                                        |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Lizenz**: "cc0 Public Domain Dedication"                                                                                                                               |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Beschreibung**: Tabellarische Auflistung der im Heliopolis-Projekt erstellten 3D-Modelle."                                                                             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Einheiten**: "n.a."                                                                                                                                                    |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Format**: "ods, OpenDocument Spreadsheet, Version 1.3"                                                                                                                 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Software**: "LibreOffice Version 7.6.2"                                                                                                                                |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Prozessierung**: "Die Werte wurden händisch eingetragen."                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Bezüge**: - Alle in der Tabelle genannten 3D-Modelle sind über das Verzeichnis `hp_daten_3D/modelle\` erschlossen.                                                     |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Attributliste**:                                                                                                                                                       |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| +-----------+-----------------+----------------------------------+---------+---------------+----------------------------------------+                                    |
+| | name      | typ             | beschreibung                     | einheit | werteliste    | link                                   |                                    |
+| +===========+=================+==================================+=========+===============+========================================+                                    |
+| | modell_id | integer(32)     | interner Identifier des Modells  | \-      | \-            | https://www.wikidata.org/wiki/Q853614  |                                    |
+| +-----------+-----------------+----------------------------------+---------+---------------+----------------------------------------+                                    |
+| | benennung | string          | Benennung des Objekts            | \-      | \-            | https://www.wikidata.org/wiki/Q1969448 |                                    |
+| +-----------+-----------------+----------------------------------+---------+---------------+----------------------------------------+                                    |
+| | methode   | string          | Erfassungsmethode des 3D-Modells | \-      | SFM, TLS, SLS | https://www.wikidata.org/wiki/Q1172399 |                                    |
+| +-----------+-----------------+----------------------------------+---------+---------------+----------------------------------------+                                    |
+| | datum     | date (YYYYMMDD) | Tag der Berechung des 3D-Modells | \-      | \-            | https://www.wikidata.org/wiki/Q205892  |                                    |
+| +-----------+-----------------+----------------------------------+---------+---------------+----------------------------------------+                                    |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Codes**:                                                                                                                                                               |
+|                                                                                                                                                                          |
+| - SFM: Structure from Motion                                                                                                                                             |
+|                                                                                                                                                                          |
+| - TLS: Terrestrial Laserscanning                                                                                                                                         |
+|                                                                                                                                                                          |
+| - SLS: Streifenlichtscanning                                                                                                                                             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Qualität**: Liste wurde im Vier-Augen-Prinzip auf Vollständigkeit und Richtigkeit geprüft.                                                                             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Genauigkeit**: sehr gut                                                                                                                                                |
+|                                                                                                                                                                          |
+| **Vollständigkeit**: sehr gut                                                                                                                                            |
+|                                                                                                                                                                          |
+| **Aktualität**: sehr gut                                                                                                                                                 |
+|                                                                                                                                                                          |
+| **Zweckmäßigkeit**: Der Datensatz erschließt lediglich übersichtlich die im Projekt generierten 3D-Modelle. Im Projekt dienten die Daten keiner analytischen Auswertung. |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Tipp: Ordner- und Dateien auflisten
 
@@ -133,39 +173,41 @@ Beispiel der Datensatz-README-Datei als markdown gerendert:
 
 Um eine Liste der Dateien in einem Verzeichnis unter Windows zu erstellen, können Sie die Eingabeaufforderung (Command Prompt) oder den Datei-Explorer verwenden. Hier sind die Schritte für beide Methoden:
 
-1.  **Eingabeaufforderung (Command Prompt):**
+::: panel-tabset
+### **Eingabeaufforderung (Command Prompt):**
 
-    - Drücken Sie die `Windows-Taste` + `R`, um das "Ausführen"-Fenster zu öffnen.
+- Drücken Sie die `Windows-Taste` + `R`, um das "Ausführen"-Fenster zu öffnen.
 
-    - Geben Sie `cmd` ein und drücken Sie `Enter`, um die Eingabeaufforderung zu öffnen.
+- Geben Sie `cmd` ein und drücken Sie `Enter`, um die Eingabeaufforderung zu öffnen.
 
-    - Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis. Zum Beispiel:
+- Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis. Zum Beispiel:
 
-      ```         
-      cd Pfad\zum\gewünschten\Verzeichnis
-      ```
+  ```         
+  cd Pfad\zum\gewünschten\Verzeichnis
+  ```
 
-    - Geben Sie den Befehl `dir` ein und drücken Sie `Enter`. Dies zeigt eine Liste der Dateien im Verzeichnis an.
+- Geben Sie den Befehl `dir` ein und drücken Sie `Enter`. Dies zeigt eine Liste der Dateien im Verzeichnis an.
 
-      ```         
-      dir
-      ```
+  ```         
+  dir
+  ```
 
-2.  **Datei-Explorer:**
+### **Datei-Explorer:**
 
-    - Öffnen Sie den Datei-Explorer und navigieren Sie zum gewünschten Verzeichnis.
+- Öffnen Sie den Datei-Explorer und navigieren Sie zum gewünschten Verzeichnis.
 
-    - Klicken Sie auf das Adressfeld, um den Pfad zu kopieren.
+- Klicken Sie auf das Adressfeld, um den Pfad zu kopieren.
 
-    - Öffnen Sie die Eingabeaufforderung (wie im Schritt 1 beschrieben).
+- Öffnen Sie die Eingabeaufforderung (wie im Schritt 1 beschrieben).
 
-    - Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis.
+- Navigieren Sie mit dem `cd`-Befehl zum gewünschten Verzeichnis.
 
-    - Geben Sie den Befehl `dir` ein und fügen Sie dann den zuvor kopierten Pfad ein. Drücken Sie anschließend `Enter`.
+- Geben Sie den Befehl `dir` ein und fügen Sie dann den zuvor kopierten Pfad ein. Drücken Sie anschließend `Enter`.
 
-      ```         
-      dir Pfad\zum\gewünschten\Verzeichnis
-      ```
+  ```         
+  dir Pfad\zum\gewünschten\Verzeichnis
+  ```
+:::
 
 Die Liste der Dateien im Verzeichnis wird in der Eingabeaufforderung angezeigt. Sie können auch zusätzliche Optionen wie `dir /B` verwenden, um nur die Dateinamen ohne zusätzliche Informationen anzuzeigen.
 
@@ -174,13 +216,13 @@ Mit `dir /b > dateiliste.txt` wird die Dateiliste in einer Datei gespeichert.
 ::: info
 Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/dir)):
 
-- /q Zeigt Dateibesitzinformationen an.
+- \q Zeigt Dateibesitzinformationen an.
 
-- /w Zeigt die Auflistung im breiten Format (Wide-Format) an, wobei in jeder Zeile mindestens fünf Dateinamen oder Verzeichnisnamen vorhanden sind.
+- \w Zeigt die Auflistung im breiten Format (Wide-Format) an, wobei in jeder Zeile mindestens fünf Dateinamen oder Verzeichnisnamen vorhanden sind.
 
-- /d Zeigt die Auflistung im gleichen Format wie /w an, aber die Dateien werden nach Spalte sortiert.
+- \d Zeigt die Auflistung im gleichen Format wie \w an, aber die Dateien werden nach Spalte sortiert.
 
-- /a\[\[:\]<attributes>\] Zeigt nur die Namen von Verzeichnissen und Dateien mit den von Ihnen angegebenen Attributen an. Wenn Sie diesen Parameter nicht verwenden, zeigt der Befehl die Namen aller Dateien mit Ausnahme ausgeblendeter und Systemdateien an. Wenn Sie diesen Parameter ohne Angabe von Attributen verwenden, zeigt der Befehl die Namen aller Dateien an, einschließlich ausgeblendeter und Systemdateien. Hier sehen Sie eine Liste der möglichen Attribute:
+- \a[[:]<attributes>\] Zeigt nur die Namen von Verzeichnissen und Dateien mit den von Ihnen angegebenen Attributen an. Wenn Sie diesen Parameter nicht verwenden, zeigt der Befehl die Namen aller Dateien mit Ausnahme ausgeblendeter und Systemdateien an. Wenn Sie diesen Parameter ohne Angabe von Attributen verwenden, zeigt der Befehl die Namen aller Dateien an, einschließlich ausgeblendeter und Systemdateien. Hier sehen Sie eine Liste der möglichen Attribute:
 
   - d – Verzeichnisse
   - h – ausgeblendete Dateien
@@ -192,50 +234,62 @@ Der Befeht `dir` bietet viele nützliche Optionen ([Quelle](https://learn.micros
 
   Sie können eine beliebige Kombination dieser Werte verwenden. Trennen Sie die Werte jedoch nicht durch Leerzeichen. Optional können Sie einen Doppelpunkt (:) als Trennzeichen verwenden. Um Werte auszuschließen, können Sie einen Bindestrich (-) als Präfix verwenden. Mit dem Attribut -s beispielsweise werden die Systemdateien nicht angezeigt.
 
-- /o\[\[:\]<sortorder>\] Sortiert die Ausgabe nach Sortierreihenfolge, die eine beliebige Kombination der folgenden Werte sein kann:
+- \o\[\[:\]<sortorder>\] Sortiert die Ausgabe nach Sortierreihenfolge, die eine beliebige Kombination der folgenden Werte sein kann:
 
-  n – alphabetisch nach Name e – alphabetisch nach Erweiterung g – Verzeichnisse zuerst gruppieren s – nach Größe, kleinste Elemente zuerst d – nach Datum/Uhrzeit, älteste Elemente zuerst Zum Umkehren der Sortierreihenfolge Präfix - verwenden
+  - n – alphabetisch nach Name
+  - e – alphabetisch nach Erweiterung
+  - g – Verzeichnisse zuerst gruppieren
+  - s – nach Größe, kleinste Elemente zuerst
+  - d – nach Datum/Uhrzeit, älteste Elemente zuerst Zum Umkehren der Sortierreihenfolge Präfix - verwenden
 
   Mehrere Werte werden in der Reihenfolge verarbeitet, in der Sie sie auflisten. Trennen Sie mehrere Werte nicht mit Leerzeichen. Optional können Sie einen Doppelpunkt (:) verwenden.
 
-  Wenn die Sortierreihenfolge nicht angegeben ist, listet dir /o die Verzeichnisse alphabetisch auf, gefolgt von den Dateien, die ebenfalls alphabetisch sortiert sind.
+  Wenn die Sortierreihenfolge nicht angegeben ist, listet dir \o die Verzeichnisse alphabetisch auf, gefolgt von den Dateien, die ebenfalls alphabetisch sortiert sind.
 
-- /t\[\[:\]<timefield>\] Gibt an, welches Zeitfeld zum Sortieren angezeigt oder verwendet werden soll. Die verfügbaren Werte für Zeitfeld lauten:
+- \t[\[:\]<timefield>\] Gibt an, welches Zeitfeld zum Sortieren angezeigt oder verwendet werden soll. Die verfügbaren Werte für Zeitfeld lauten:
 
-  c – Erstellung a – letzter Zugriff w – letzter Schreibvorgang
+  - c – Erstellung
+  - a – letzter Zugriff
+  - w – letzter Schreibvorgang
 
-- /s Listet jedes Vorkommen des angegebenen Dateinamens im angegebenen Verzeichnis und in allen Unterverzeichnissen auf.
+- \s Listet jedes Vorkommen des angegebenen Dateinamens im angegebenen Verzeichnis und in allen Unterverzeichnissen auf.
 
-- /b Zeigt eine Liste von Verzeichnissen und Dateien ohne zusätzliche Informationen an. Der Parameter /b überschreibt den Parameter /w.
+- \b Zeigt eine Liste von Verzeichnissen und Dateien ohne zusätzliche Informationen an. Der Parameter \b überschreibt den Parameter \w.
 
-- /l Zeigt nicht sortierte Verzeichnisnamen und Dateinamen in Kleinbuchstaben an.
+- \l Zeigt nicht sortierte Verzeichnisnamen und Dateinamen in Kleinbuchstaben an.
 
-- /n Zeigt eine lange Liste mit Dateinamen ganz rechts auf dem Bildschirm an.
+- \n Zeigt eine lange Liste mit Dateinamen ganz rechts auf dem Bildschirm an.
 
-- /x Zeigt die kurzen Namen an, die für Nicht-8dot3-Dateinamen generiert werden. Die Anzeige entspricht der Anzeige mit /n, der kurze Name wird jedoch vor dem langen Namen eingefügt.
+- \x Zeigt die kurzen Namen an, die für Nicht-8dot3-Dateinamen generiert werden. Die Anzeige entspricht der Anzeige mit \n, der kurze Name wird jedoch vor dem langen Namen eingefügt.
 
-- /c Zeigt das Tausendertrennzeichen bei Dateigrößen an. Dies ist das Standardverhalten. Verwenden Sie /-c, um Trennzeichen auszublenden.
+- \c Zeigt das Tausendertrennzeichen bei Dateigrößen an. Dies ist das Standardverhalten. Verwenden Sie -c, um Trennzeichen auszublenden.
 
-- /4 Zeigt Jahresangaben im vierstelligen Format an.
+- \\4 Zeigt Jahresangaben im vierstelligen Format an.
 
 **Beispiele**
 
 Um alle Verzeichnisse nacheinander in alphabetischer Reihenfolge im Wide-Format anzuzeigen und nach jedem Bildschirm anzuhalten, stellen Sie sicher, dass das Stammverzeichnis das aktuelle Verzeichnis ist, und geben Sie dann Folgendes ein:
 
-`dir /s/w/o/p`
+`dir \s\w\o\p`
 
 Die Ausgabe listet das Stammverzeichnis, die Unterverzeichnisse und die Dateien im Stammverzeichnis einschließlich Erweiterungen auf. Dieser Befehl listet auch die Unterverzeichnisnamen und die Dateinamen in jedem Unterverzeichnis in der Struktur auf.
 
 Wenn Sie das vorherige Beispiel so ändern möchten, dass dir die Dateinamen und Erweiterungen anzeigt, aber die Verzeichnisnamen weglässt, geben Sie Folgendes ein:
 
-`dir /s/w/o/p/a:-`
+`dir \s\w\o\p\a:-`
 :::
 
 **Die Alternative zu `dir`: `tree`**
 
-Einen Verzeichnisbaum in eine Textdatei speichern: 1. Verzeichnis in der Konsole aufrufen 2. mit `tree /f /a |clip` Ordnerstruktur inkl. Dateinamen in die Zwischenablage kopieren (mit `tree /a |clip` werden nur die Ordner berücksichtigt\`) 3. Texteditor öffnen und mit STRG-V den Inhalt einfügen
+Einen Verzeichnisbaum in eine Textdatei speichern:
 
-Erläuterung:
+1\. Verzeichnis in der Konsole aufrufen
+
+2\. mit `tree \f \a |clip` Ordnerstruktur inkl. Dateinamen in die Zwischenablage kopieren (mit `tree \a |clip` werden nur die Ordner berücksichtigt)
+
+3\. Texteditor öffnen und mit STRG-V den Inhalt einfügen
+
+**Erläuterung:**
 
 Der Befehlt `tree` generiert nicht-Unicode-konforme Zeichen. Eine Speicherung der Daten mit `> Ordnerliste.txt` wie im Beispiel mit `dir` oben überträgt den Inhalt . Die Option `|clip` kopiert die Ausgabe des Befehls in die Zwischenablage. Mit STRG-V kann der Inhalt in eine Text-Datei eingefügt werden.
 
@@ -269,7 +323,5 @@ Dieses Skript nutzt das [OER-Skript-Template von NFDI4Objects](https://github.co
 
 Bei der Erstellung dieser OER wurden keine KI-basierten Werkzeuge eingesetzt.
 
-
 ```{=html}
-
 ```
